@@ -39,8 +39,8 @@ course, and that course likely did not teach reproducible methods.
 
 A typical workflow in data analysis has at least two major components: a 
 statistical software package for performing the data analysis; and a layout 
-package for presenting the results. Traditionally, the analyst’s work begin
-s in their statistical package of choice (e.g. R, SAS, Minitab, Excel), where 
+package for presenting the results. Traditionally, the analyst's work begins 
+in their statistical package of choice (e.g. R, SAS, Minitab, Excel), where 
 they perform the data analysis. Then, results are summarized and presented using
 a word processor (e.g. Microsoft Word, Google Docs, LaTeX). This workflow is 
 ubiquitous, and in most undergraduate courses where students are expected to 
@@ -96,8 +96,7 @@ and sale price of homes in Los Angeles. They probably started by constructing a
 scatterplot of these two variables:
 
 ```{r la_homes}
-download.file("http://bit.ly/chance_LAhomes", destfile = "LA.csv")
-LA <- read.csv("LA.csv")
+LA <- read.csv("http://andrewpbray.github.io/data/LA.csv")
 plot(price/1000000 ~ sqft, data = LA, pch = 19, col = COL[1,3], 
      ylab = "price (in million $)")
 ```
@@ -144,8 +143,7 @@ an anonymous survey to report their weights, in ounces. We then distributed thes
 data back to the students and asked them to analyze it.
 
 ```{r weight_ounces}
-download.file("http://bit.ly/chance_weight", destfile = "wt.csv")
-wt <- read.csv("wt.csv")
+wt <- read.csv("http://andrewpbray.github.io/data/wt.csv")
 hist(wt$weight_ounces, main = "", col = COL[1], border = "white", 
      ylab = "", xlab = "weight (in ounces)")
 ```
